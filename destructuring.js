@@ -131,6 +131,17 @@ function largeNumbers({first, second, third}){
   Find the longest array and return that array.
 */
 
-//Code Here
+function numberGroups(obj){
+  let {a, b, c} = obj
+  if (a.length > b.length && a.length > c.length){
+    return a
+  }
+  else if (b.length > a.length && b.length > c.length){
+    return b
+  }
+  else if (c.length > a.length && c.length > b.length){
+    return c
+  }
+}
 
 

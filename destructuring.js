@@ -93,6 +93,8 @@ function ingredients(obj) {
 
 
 
+
+
 ////////// PROBLEM 5 //////////
 
 /*
@@ -107,7 +109,17 @@ function ingredients(obj) {
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
+function largeNumbers({first, second, third}){
+  if (first < second && first <third){
+    return first
+  }
+  else if (second < first && second < third) {
+    return second
+  }
+  else if (third < first && third < second) {
+    return third
+  }
+}
 
 
 

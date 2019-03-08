@@ -66,7 +66,11 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+function totalPopulation(obj) {
+  let {utah, california, texas, arizona} = obj
+  var total = utah + california + texas + arizona
+  return total
+}
 
 
 

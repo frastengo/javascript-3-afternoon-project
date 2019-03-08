@@ -21,8 +21,19 @@ var carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 
-//Code Here
+const {color, make, model, year} = carDetails
 
+// function destruction(obj){
+//   let {color, make, model, year} = obj
+//   return {
+//     color: 'color',
+//     make: 'make',
+//     model: 'model',
+//     year: 'year',
+//   }
+// }
+
+// destruction(carDetails)
 
 
 ////////// PROBLEM 2 //////////

@@ -23,6 +23,7 @@ var carDetails = {
 
 const {color, make, model, year} = carDetails
 
+
 // function destruction(obj){
 //   let {color, make, model, year} = obj
 //   return {
@@ -45,6 +46,7 @@ const {color, make, model, year} = carDetails
 */
 
 function greeting( obj ) {
+  let {firstName, lastName, title} = obj
   //Code Here
   
   // Do not edit the code below.

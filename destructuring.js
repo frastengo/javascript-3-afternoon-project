@@ -84,7 +84,12 @@ function totalPopulation(obj) {
   Push these new variables to an array and return the array. 
 */
 
-//Code Here
+function ingredients(obj) {
+  let {carb, fat, protein} = obj
+  var array = []
+  array.push(carb, fat, protein)
+  return array
+}
 
 
 

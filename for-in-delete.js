@@ -99,7 +99,16 @@ function double(obj){
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here
+function secrets(obj){
+  var string = ''
+  for(var key in obj){
+    if (key.startsWith("sh")){
+      string = string + obj[key]
+    }
+  }
+  return string
+}
+
 
 
 
@@ -130,7 +139,12 @@ function double(obj){
   Delete the property password and return the object.
 */
 
-//Code Here
+function removePassword(obj){
+  for(var key in obj){
+    delete obj.password
+  }
+  return obj
+}
 
 
 
@@ -146,10 +160,16 @@ var deleteTheBigNumbers = {
 // Do not edit the code above.
 
 /*
-  Write a for in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
+  Write a for in loop that deletes every property from the object deleteTheBigNumbers whose 
+  value is greater than 100.
 */
 
-//Code Here
+for (var key in deleteTheBigNumbers) {
+  if (deleteTheBigNumbers[key] > 100) {
+    delete deleteTheBigNumbers[key];
+  }
+}
+
 
 
 

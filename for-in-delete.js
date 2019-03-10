@@ -208,7 +208,7 @@ function startsWithK(obj){
 function hiddenTreasure(obj){
   for (var key in obj){
     if (obj[key].includes("treasure") !== true){
-      delete obj[key]
+      delete key
     }
   }
 return obj

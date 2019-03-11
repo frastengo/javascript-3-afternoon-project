@@ -72,6 +72,7 @@ function greaterThan10(obj){
 
 
 
+
 ////////// PROBLEM 3 //////////
 
 /*
@@ -208,7 +209,7 @@ function startsWithK(obj){
 function hiddenTreasure(obj){
   for (var key in obj){
     if (obj[key].includes("treasure") !== true){
-      delete key
+      delete obj[key]
     }
   }
 return obj

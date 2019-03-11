@@ -50,7 +50,18 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+function employeeUpdater(){
+  for (var i = 0; i < employees.length; i++){
+    if (employees[i].firstName === "Theo") {
+      employees.splice(i, 1)
+    }
+    else if (employees[i].firstName === "Lorie"){
+      employees[i].department = "HR"
+    }
+  }
+  return employees
+}
+
 
 
 
@@ -66,10 +77,22 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     1. Write a function called 'removeDuplicates' that will remove all duplicate entries in the workplaceAccidents array.
     2. Use nested for loops to check for duplicate numbers, and then remove the duplicates from the array.
     3. Return the updated array.
+    HELP WITH THIS***
 */
 
-//Code Here
+function removeDuplicates(arr){
+  for (var i = 0; i < arr.length; i++){
+    for (var j = i + 1; j < arr.length; j++){
+      if (arr[i] === arr[j]) {
+        arr.splice(i, 1)
+        i--
+      }
+    }
+  }
+  return arr
+}
 
+removeDuplicates(workplaceAccidents)
 
 
 ////////// PROBLEM 3 //////////
@@ -83,7 +106,7 @@ var cat = {
       activities: ['be grumpy', 'eat food']
     }, 
     {
-      name: 'Lazy Bones',
+      name: 'Lazy Bones', 
       activities: ['sleep', 'pre-sleep naps']
     }
   ]
@@ -97,8 +120,13 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends[0].activities[1];
+console.log(grumpyActivity)
+
+var fluffy2ndFriend = cat.catFriends[1].name
+console.log(fluffy2ndFriend)
+
+
 
 
 
@@ -138,7 +166,32 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+// method 1
+
+// function recordCleaner(){
+//   for (var accidents in myCar){
+//     for (i = 0; i > accidents.length; i ++) {
+//       if (accidents[i].atFaultForAccident === true){
+//       accidents[i].atFaultForAccident = false;
+//       }
+//     }
+//   }
+// return myCar
+// }
+// console.log(myCar)
+
+
+
+// method 2
+
+function recordCleaner(){
+    for (i = 0; i < myCar.accidents.length; i ++) {
+      myCar.accidents[i].atFaultForAccident = false;
+    }
+return myCar
+}
+console.log(myCar.accidents)
+
 
 
 
@@ -146,6 +199,7 @@ var myCar = {
 
 // Do not edit the code below.
 var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
+
 // Do not edit the code above.
 
 /*
@@ -157,6 +211,19 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
+function looper(modifiedArray){
+  for (var i = 0; i < modifiedArray.length; i++){
+    for (var j = 0; j < modifiedArray[i].length; j++){
+      if (modifiedArray[i][j] % 2 === 0){
+        modifiedArray[i][j] = 'even'
+      }
+      else {
+        modifiedArray[i][j] = 'odd'
+      }
+    }
+  }
+  return modifiedArray;
+}
+// console.log(looper(numsArr))
 
 
